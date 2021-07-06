@@ -18,4 +18,5 @@ spec:
       - name: podinfo
         image: stefanprodan/podinfo
         ports:
-        - containerPort: 9443
+        - containerPort: 80
+          protocol: TCP

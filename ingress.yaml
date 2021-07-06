@@ -1,9 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: test-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: podinfo-ingress
+  # annotations:
+  #  nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
@@ -12,6 +12,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: my-service
+            name: podinfo-svc
             port:
-              number: 80
+              number: 8080

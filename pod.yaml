@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: podinfo-app
+  labels:
+    app: podinfo
+spec:
+  containers:
+  - name: podinfo-app
+    image: stefanprodan/podinfo
